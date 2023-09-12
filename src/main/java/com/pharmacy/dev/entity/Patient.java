@@ -1,5 +1,6 @@
 package com.pharmacy.dev.entity;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,4 +22,7 @@ public class Patient {
 
     @OneToOne(mappedBy = "patient")
     private Prescription prescription;
+
+    @OneToOne(mappedBy = "patient")
+    private Payment payment;
 }
